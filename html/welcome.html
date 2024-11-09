@@ -1,19 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Page Title</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        /* Styling the Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #9cd3e8;
+            color: #00171F;
+        }
 
+        /* Logo Section */
+        .navbar .logo img {
+            height: 40px; /* Adjust height as needed */
+        }
 
+        /* Navigation Links */
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            display: flex;
+            align-items: center;
+            color: #00171F;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        .nav-links a img {
+            height: 20px; /* Adjust icon height as needed */
+            width: 20px;
+            margin-left: 8px;
+        }
+
+        .nav-links a:hover {
+            color: #007ea7; /* Lighter color on hover */
+        }
+    </style>
 </head>
+
 <body>
-    <!---
-    <div style="background-image: url('../image/welcomeBackground.jpg'); padding: 60px;">
-        <h1><b>It saves a life to know...</b></h1>
-        <h4>Save lives and time by practicing first aid <br>
-            scenarios on the go or at home...
-        </h4>
-    </div>
-    -->
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <!-- Left Side: Logo -->
+        <div class="logo">
+            <img src="../image/Logo.svg" alt="Logo">
+        </div>
+
+        <!-- Right Side: Navigation Links with Images -->
+        <div class="nav-links">
+            <a href="#home">
+                Home
+                <img src="../image/home.png" alt="Home Icon">
+            </a>
+            <a href="#categories">
+                Categories
+                <img src="../image/menu.png" alt="Categories Icon">
+            </a>
+            <a href="#login">
+                Login
+                <img src="../image/profile.png" alt="Login Icon">
+            </a>
+        </div>
+    </nav>
+   
     <div style="
     background-image: url('../image/welcomeBackground.jpg');
     background-size: cover;
