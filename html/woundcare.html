@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wound Care</title>
+    <style>
+        /* Category Section Styling */
+        .categories-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        /* Category Name */
+        .category-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #007ea7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        /* Grid Layout for Images */
+        .category-images {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Two columns */
+            gap: 20px; /* Space between images */
+            margin-top: 20px;
+        }
+
+        /* Individual Category Image Styling */
+        .category-image {
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .category-image img {
+            width: 100%; /* Make the image fill the container */
+            height: auto;
+        }
+
+        .image-description {
+            font-size: 18px;
+            color: #333;
+            padding: 10px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .image-link {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007ea7;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .image-link:hover {
+            background-color: #005f74;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling the Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #9cd3e8;
+            color: #00171F;
+        }
+
+        /* Logo Section */
+        .navbar .logo img {
+            height: 40px; /* Adjust height as needed */
+        }
+
+        /* Navigation Links */
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            display: flex;
+            align-items: center;
+            color: #00171F;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        .nav-links a img {
+            height: 20px; /* Adjust icon height as needed */
+            width: 20px;
+            margin-left: 8px;
+        }
+
+        .nav-links a:hover {
+            color: #007ea7; /* Lighter color on hover */
+        }
+        /* Our First Aid Categories Section with Image Background */
+        .categories-header {
+            background-image: url('../image/welcomeBackground.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 80px 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <!-- Left Side: Logo -->
+    <div class="logo">
+        <img src="../image/Logo.svg" alt="Logo">
+    </div>
+
+    <!-- Right Side: Navigation Links with Images -->
+    <div class="nav-links">
+        <a href="main.html">
+            Home
+            <img src="../image/home.png" alt="Home Icon">
+        </a>
+        <a href="#categories">
+            Categories
+            <img src="../image/menu.png" alt="Categories Icon">
+        </a>
+        <a href="#login">
+            Login
+            <img src="../image/profile.png" alt="Login Icon">
+        </a>
+    </div>
+</nav>
+
+<div class="categories-header">
+    <h2>Wound Care</h2>
+    <!-- back button -->
+    <a href="categories.html" style="
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #007ea7;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        font-weight: bold;
+    ">
+        All Categories
+    </a>
+</div>
+
+<div class="categories-section">
+    
+    <div class="category">
+        <a href="woundcare.html" class="category-name">Scenarios Available</a> <!-- This is the clickable category name that links to the category page -->
+        <div class="category-images">
+            <div class="category-image">
+                <img src="../image/Wound Care/cutsandscrapes.png" alt="Cuts and Scrapes">
+                <div class="image-description">Cuts and Scrapes</div>
+                <a href="cutsandscrapes.html" class="image-link">View Scenario</a>
+            </div>
+            <div class="category-image">
+                <img src="../image/Wound Care/burns.png" alt="Burns">
+                <div class="image-description">Burns</div>
+                <a href="burns.html" class="image-link">View Scenario</a>
+            </div>
+            <div class="category-image">
+                <img src="../image/Wound Care/nosebleed.png" alt="Nosebleeds">
+                <div class="image-description">Nosebleeds</div>
+                <a href="nosebleeds.html" class="image-link">View Scenario</a>
+            </div>
+            <div class="category-image">
+                <img src="../image/Wound Care/splinter.png" alt="Splinter">
+                <div class="image-description">Splinters</div>
+                <a href="splinter.html" class="image-link">View Scenario</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom Nav Bar -->
+<div style="background-color: #9cd3e8; color: #00171F; padding: 20px 0; width: 100%; text-align: left;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; padding: 0 20px;">
+        
+        <!-- Logo on the Left -->
+        <div style="flex: 1;">
+            <img src="../image/Logo.svg" alt="Logo" style="height: 80px;">
+        </div>
+        
+        <!-- Navigation Columns on the Right -->
+        <div style="display: flex; flex: 3; justify-content: space-between;">
+            
+            <!-- Quick Links Column -->
+            <div style="flex: 1;">
+                <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">Quick Links</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><a href="welcome.html" style="color: #00171F; text-decoration: none;">Welcome</a></li>
+                    <li><a href="#profile" style="color: #00171F; text-decoration: none;">Profile</a></li>
+                    <li><a href="#categories" style="color: #00171F; text-decoration: none;">Categories</a></li>
+                </ul>
+            </div>
+
+            <!-- About Column -->
+            <div style="flex: 1;">
+                <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">About</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><a href="#team" style="color: #00171F; text-decoration: none;">Our Team</a></li>
+                    <li><a href="#mission" style="color: #00171F; text-decoration: none;">Our Mission</a></li>
+                    <li><a href="#policies" style="color: #00171F; text-decoration: none;">Policies</a></li>
+                    <li><a href="#partners" style="color: #00171F; text-decoration: none;">Partners</a></li>
+                </ul>
+            </div>
+            
+            <!-- Help Column -->
+            <div style="flex: 1;">
+                <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">Help</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><a href="#faq" style="color: #00171F; text-decoration: none;">FAQ</a></li>
+                    <li><a href="#help-center" style="color: #00171F; text-decoration: none;">Help Center</a></li>
+                    <li><a href="#privacy" style="color: #00171F; text-decoration: none;">Privacy Settings</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

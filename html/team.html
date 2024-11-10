@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Team</title>
+    <style>
+        /* Reset and Body Styling */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: #9cd3e8;
+        color: #00171F;
+        margin-bottom: 20px;
+    }
+
+    .navbar .logo img {
+        height: 40px;
+    }
+
+    .navbar .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .nav-links a {
+        display: flex;
+        align-items: center;
+        color: #00171F;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    .navbar .nav-links a img {
+        height: 20px;
+        width: 20px;
+        margin-left: 8px;
+    }
+
+    .navbar .nav-links a:hover {
+        color: #007ea7;
+    }
+
+    /* Team Section Styling */
+    .team-section {
+        text-align: center;
+        max-width: 800px;
+        padding: 20px;
+        margin-top: 40px; /* Space below the navbar */
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        margin-bottom: 60px;
+    }
+
+    .team-section h1 {
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .team-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .team-member {
+        flex: 1 1 250px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .team-member img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-member h3 {
+        font-size: 24px;
+        color: #007ea7;
+        margin-bottom: 10px;
+    }
+
+    .team-member p {
+        font-size: 16px;
+        color: #555;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../image/Logo.svg" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="main.html">
+                Home
+                <img src="../image/home.png" alt="Home Icon">
+            </a>
+            <a href="categories.html">
+                Categories
+                <img src="../image/menu.png" alt="Categories Icon">
+            </a>
+            <a href="#login">
+                Login
+                <img src="../image/profile.png" alt="Login Icon">
+            </a>
+        </div>
+    </nav>
+
+<div class="team-section">
+    <h1>Meet the Team</h1>
+    <div class="team-container">
+        <!-- Team Member 1 -->
+        <div class="team-member">
+            <img src="../image/misheel.png" alt="Team Member 1">
+            <h3>Misheel Tuguldur</h3>
+            <p>Misheel is a third year Computer Science student, a member of CSHub, and ElleHacks Logistics Executive </p>
+        </div>
+        
+        <!-- Team Member 2 -->
+        <div class="team-member">
+            <img src="../image/jasmin.png" alt="Team Member 2">
+            <h3>Jasmin Slootweg</h3>
+            <p>Jasmin is a third year Computer Science student, working at the Risk and Insurance Studies Center</p>
+        </div>
+        
+        <!-- Team Member 3 -->
+        <div class="team-member">
+            <img src="../image/subin.png" alt="Team Member 3">
+            <h3>Subing Hwang</h3>
+            <p>Subin is a third year Computer Science student, minoring in Mathematics, and a member of CSHub</p>
+        </div>
+    </div>
+</div>
+<!-- Bottom Nav Bar -->
+<div style="background-color: #9cd3e8; color: #00171F; padding: 20px 0; width: 100%; text-align: left;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; padding: 0 20px;">
+        
+        <!-- Logo on the Left -->
+        <div style="flex: 1;">
+            <img src="../image/Logo.svg" alt="Logo" style="height: 80px;">
+        </div>
+        
+        <!-- Navigation Columns on the Right -->
+        <div style="display: flex; flex: 3; justify-content: space-between;">
+            
+            <!-- Quick Links Column -->
+            <div style="flex: 1;">
+                <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">Quick Links</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><a href="welcome.html" style="color: #00171F; text-decoration: none;">Welcome</a></li>
+                    <li><a href="#profile" style="color: #00171F; text-decoration: none;">Profile</a></li>
+                    <li><a href="#categories.html" style="color: #00171F; text-decoration: none;">Categories</a></li>
+                </ul>
+            </div>
+
+            <!-- About Column -->
+            <div style="flex: 1;">
+                <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">About</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><a href="team.html" style="color: #00171F; text-decoration: none;">Our Team</a></li>
+                    <li><a href="#mission" style="color: #00171F; text-decoration: none;">Our Mission</a></li>
+                    <li><a href="#policies" style="color: #00171F; text-decoration: none;">Policies</a></li>
+                    <li><a href="#partners" style="color: #00171F; text-decoration: none;">Partners</a></li>
+                </ul>
+            </div>
+            
+            <!-- Help Column -->
+            <div style="flex: 1;">
+                <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">Help</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><a href="#faq" style="color: #00171F; text-decoration: none;">FAQ</a></li>
+                    <li><a href="#help-center" style="color: #00171F; text-decoration: none;">Help Center</a></li>
+                    <li><a href="#privacy" style="color: #00171F; text-decoration: none;">Privacy Settings</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
