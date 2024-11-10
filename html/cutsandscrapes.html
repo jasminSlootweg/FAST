@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuts and Scrapes Scenario</title>
     <style>
-        
         /* Basic Reset */
         * {
             margin: 0;
@@ -25,7 +24,7 @@
 
         /* Logo Section */
         .navbar .logo img {
-            height: 40px; /* Adjust height as needed */
+            height: 40px;
         }
 
         /* Navigation Links */
@@ -44,21 +43,20 @@
         }
 
         .nav-links a img {
-            height: 20px; /* Adjust icon height as needed */
+            height: 20px;
             width: 20px;
             margin-left: 8px;
         }
 
         .nav-links a:hover {
-            color: #007ea7; /* Lighter color on hover */
+            color: #007ea7;
         }
 
         body {
-            margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
         }
-        .cuts-info {
+
+        .treatment-info, .cuts-info {
             max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
@@ -66,19 +64,27 @@
             border-radius: 8px;
         }
 
-        .cuts-info h2 {
+        .treatment-info h2, .cuts-info h2 {
             text-align: center;
             font-size: 30px;
             margin-bottom: 20px;
         }
 
-        .cuts-info p {
+        .treatment-info p, .cuts-info p {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 20px;
         }
 
-        /* List of Wounds */
+        .treatment-steps {
+            margin: 20px 0;
+        }
+
+        .treatment-step {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
         .wound-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -101,18 +107,15 @@
             font-size: 16px;
             color: #555;
         }
-
     </style>
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <!-- Left Side: Logo -->
         <div class="logo">
             <img src="../image/Logo.svg" alt="Logo">
         </div>
-
-        <!-- Right Side: Navigation Links with Images -->
         <div class="nav-links">
             <a href="main.html">
                 Home
@@ -128,113 +131,58 @@
             </a>
         </div>
     </nav>
-    
-    <div style="
-    background-image: url('../image/welcomeBackground.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%; 
-    padding: 40px; 
-    border-radius: 8px;
-    text-align: center;
-    color: #00171F;
-">
-    <h1 style="font-size: 40px; margin-bottom: 20px;">Cuts and Scrapes</h1>
-    <h4 style="font-weight: normal; margin-bottom: 30px;">
-        Study the information, and when you're ready, do the practice scenario!
-    </h4>
-    
-    <!-- Get Started Button -->
-    <a href="practicecutsandscrapes.html" style="
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: #007ea7;
-        color: white;
-        text-decoration: none;
-        font-size: 16px;
-        border-radius: 5px;
-        font-weight: bold;
-    ">
-        Practice
-    </a>
-</div>
-<div class="cuts-info">
-    <h2>Types of Cuts and Scrapes</h2>
-    <p>Here are different types of cuts and scrapes you might encounter and how to treat them:</p>
 
-    <div class="wound-list">
-        <!-- First Wound -->
-        <div class="wound-item">
-            <h3>Minor Scrape</h3>
-            <p>A small abrasion to the skin that may cause bleeding. Clean with water and apply an antiseptic ointment.</p>
+    <!-- Background Section -->
+    <div style="background-image: url('../image/welcomeBackground.jpg'); background-size: cover; background-position: center; width: 100%; padding: 40px; border-radius: 8px; text-align: center; color: #00171F;">
+        <h1 style="font-size: 40px; margin-bottom: 20px;">Cuts and Scrapes</h1>
+        <h4 style="font-weight: normal; margin-bottom: 30px;">Study the information, and when you're ready, do the practice scenario!</h4>
+        <a href="practicecutsandscrapes.html" style="display: inline-block; padding: 12px 24px; background-color: #007ea7; color: white; text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold;">
+            Practice
+        </a>
+    </div>
+
+    <!-- Treatment Information Section -->
+    <div class="treatment-info" style="background-color: #9cd3e8;">
+        <h2>Treatment</h2>
+        <p>These guidelines can help you care for minor cuts and scrapes:</p>
+        <div class="treatment-steps">
+            <p class="treatment-step"><strong>Step 1:</strong> Wash your hands. This helps avoid infection.</p>
+            <p class="treatment-step"><strong>Step 2:</strong> Stop the bleeding. Minor cuts and scrapes usually stop bleeding on their own. If needed, gently press the wound with a clean bandage or cloth. Raise the area until the bleeding stops.</p>
+            <p class="treatment-step"><strong>Step 3:</strong> Clean the wound. Rinse with water to reduce infection risk. Clean around the wound with soap but avoid getting soap inside. Use tweezers cleaned with alcohol to remove debris.</p>
+            <p class="treatment-step"><strong>Step 4:</strong> Apply antibiotic or petroleum jelly to keep the surface moist and help prevent scarring. If you get a rash, stop using the ointment.</p>
+            <p class="treatment-step"><strong>Step 5:</strong> Cover the wound with a bandage or gauze to keep it clean. Minor scrapes or scratches may not need covering.</p>
+            <p class="treatment-step"><strong>Step 6:</strong> Change the covering at least once a day or if it becomes wet or dirty.</p>
         </div>
+        <p><strong>Seek medical care if:</strong></p>
+            <p>- There are signs of infection like increasing pain, warmth, or swelling.</p>
+            <p>- A tetanus shot is needed (e.g., for deep or dirty wounds).</p>
+        </ul>
+        <p>For further guidance, watch the video on <a href="https://www.mayoclinic.org/first-aid/first-aid-cuts/basics/art-20056711" target="_blank">how to clean a wound</a> by Mayo Clinic.</p>
+    </div>
 
-        <!-- Second Wound -->
-        <div class="wound-item">
-            <h3>Deep Cut</h3>
-            <p>A deeper wound that may require stitches. Apply pressure to stop the bleeding and seek medical help immediately.</p>
-        </div>
-
-        <!-- Third Wound -->
-        <div class="wound-item">
-            <h3>Grazes</h3>
-            <p>Shallow wounds typically caused by friction. Clean with water and apply a sterile bandage.</p>
-        </div>
-
-        <!-- Fourth Wound -->
-        <div class="wound-item">
-            <h3>Incision</h3>
-            <p>A clean cut made by a sharp object. It's important to clean the wound properly and apply sterile dressing.</p>
+    <!-- Cuts and Scrapes Information Section -->
+    <div class="cuts-info">
+        <h2>Types of Cuts and Scrapes</h2>
+        <p>Here are different types of cuts and scrapes you might encounter and how to treat them:</p>
+        <div class="wound-list">
+            <div class="wound-item">
+                <h3>Minor Scrape</h3>
+                <p>A small abrasion to the skin that may cause bleeding. Clean with water and apply an antiseptic ointment.</p>
+            </div>
+            <div class="wound-item">
+                <h3>Deep Cut</h3>
+                <p>A deeper wound that may require stitches. Apply pressure to stop the bleeding and seek medical help immediately.</p>
+            </div>
+            <div class="wound-item">
+                <h3>Grazes</h3>
+                <p>Shallow wounds typically caused by friction. Clean with water and apply a sterile bandage.</p>
+            </div>
+            <div class="wound-item">
+                <h3>Incision</h3>
+                <p>A clean cut made by a sharp object. Clean the wound and apply a sterile dressing.</p>
+            </div>
         </div>
     </div>
-</div>
-
-<div style="background-color: #9cd3e8; color: #00171F; padding: 20px 0; width: 100%; text-align: left;">
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; padding: 0 20px;">
-        
-        <!-- Logo on the Left -->
-        <div style="flex: 1;">
-            <img src="../image/Logo.svg" alt="Logo" style="height: 80px;">
-        </div>
-        
-        <!-- Navigation Columns on the Right -->
-        <div style="display: flex; flex: 3; justify-content: space-between;">
-            
-            <!-- Quick Links Column -->
-            <div style="flex: 1;">
-                <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">Quick Links</h4>
-                <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="welcome.html" style="color: #00171F; text-decoration: none;">Welcome</a></li>
-                    <li><a href="#profile" style="color: #00171F; text-decoration: none;">Profile</a></li>
-                    <li><a href="categories.html" style="color: #00171F; text-decoration: none;">Categories</a></li>
-                </ul>
-            </div>
-
-            <!-- About Column -->
-            <div style="flex: 1;">
-                <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">About</h4>
-                <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="team.html" style="color: #00171F; text-decoration: none;">Our Team</a></li>
-                    <li><a href="#mission" style="color: #00171F; text-decoration: none;">Our Mission</a></li>
-                    <li><a href="#policies" style="color: #00171F; text-decoration: none;">Policies</a></li>
-                    <li><a href="#partners" style="color: #00171F; text-decoration: none;">Partners</a></li>
-                </ul>
-            </div>
-            
-            <!-- Help Column -->
-            <div style="flex: 1;">
-                <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">Help</h4>
-                <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="#faq" style="color: #00171F; text-decoration: none;">FAQ</a></li>
-                    <li><a href="#help-center" style="color: #00171F; text-decoration: none;">Help Center</a></li>
-                    <li><a href="#privacy" style="color: #00171F; text-decoration: none;">Privacy Settings</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</div>
-
 
 </body>
 </html>
