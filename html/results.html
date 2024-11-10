@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .results-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .score {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .retry-btn {
+            padding: 15px;
+            background-color: #007ea7;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .retry-btn:hover {
+            background-color: #005f78;
+        }
+         /* Navbar Styling */
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: #9cd3e8;
+        color: #00171F;
+        margin-bottom: 20px;
+    }
+
+    .navbar .logo img {
+        height: 40px;
+    }
+
+    .navbar .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .nav-links a {
+        display: flex;
+        align-items: center;
+        color: #00171F;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    .navbar .nav-links a img {
+        height: 20px;
+        width: 20px;
+        margin-left: 8px;
+    }
+
+    .navbar .nav-links a:hover {
+        color: #007ea7;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../image/Logo.svg" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="main.html">
+                Home
+                <img src="../image/home.png" alt="Home Icon">
+            </a>
+            <a href="categories.html">
+                Categories
+                <img src="../image/menu.png" alt="Categories Icon">
+            </a>
+            <a href="#login">
+                Login
+                <img src="../image/profile.png" alt="Login Icon">
+            </a>
+        </div>
+    </nav>
+<div class="results-container">
+    <h1>Quiz Results</h1>
+    <p class="score">Your score: <span id="score"></span> / 5</p>
+    <a href="../html/practicecutsandscrapes.html" class="retry-btn">Retry Quiz</a>
+</div>
+
+<script>
+    // Get the score from localStorage and display it
+    const score = localStorage.getItem('score') || 0;
+    document.getElementById('score').textContent = score;
+</script>
+
+</body>
+</html>
