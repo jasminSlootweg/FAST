@@ -16,16 +16,16 @@
             color: #00171F;
             margin-bottom: 20px;
         }
-
+        
         .navbar .logo img {
             height: 40px;
         }
-
+        
         .navbar .nav-links {
             display: flex;
             align-items: center;
         }
-
+        
         .navbar .nav-links a {
             display: flex;
             align-items: center;
@@ -34,15 +34,11 @@
             margin-left: 20px;
             font-size: 16px;
         }
-
+        
         .navbar .nav-links a img {
             height: 20px;
             width: 20px;
             margin-left: 8px;
-        }
-
-        .navbar .nav-links a:hover {
-            color: #007ea7;
         }
 
         /* Main Styling */
@@ -52,43 +48,46 @@
             margin: 0;
             padding: 0;
         }
+
         .quiz-container {
             max-width: 800px;
-            width: 90%; /* Allows flexibility on smaller screens */
+            width: 90%;
             margin: 50px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            text-align: center;
-        }
+
         .question {
             margin-bottom: 20px;
         }
+
         .answers {
             display: flex;
             flex-direction: column;
+            gap: 5px;
         }
+
         .answers button {
             padding: 12px;
-            margin: 5px 0;
             background-color: #007ea7;
             color: white;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
-            text-align: left; /* Aligns text to left within button */
+            text-align: left;
         }
-        .answers button:disabled {
-            background-color: gray;
-            cursor: not-allowed;
+
+        .answers button.correct {
+            background-color: #4CAF50; /* Green for correct answers */
         }
-        .answers button:hover:not(:disabled) {
-            background-color: #005f78;
+
+        .answers button.incorrect {
+            background-color: #f44336; /* Red for incorrect answers */
         }
+        
         .submit-btn {
             margin-top: 30px;
             display: block;
@@ -101,27 +100,6 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .submit-btn:hover {
-            background-color: #005f78;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .navbar .nav-links {
-                margin-top: 10px;
-            }
-            .answers button {
-                font-size: 14px; /* Smaller font on smaller screens */
-                padding: 10px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-        }
     </style>
 </head>
 <body>
@@ -131,111 +109,151 @@
         </div>
         <div class="nav-links">
             <a href="main.html">
-                Exit      .
+                Exit
                 <img src="../image/home.png" alt="Home Icon">
             </a>
         </div>
     </nav>
 
-<div class="quiz-container">
-    <h1>Quiz</h1>
-    <form id="quizForm">
-        <!-- Question 1 -->
-        <div class="question">
-            <h2>1. What is the first step in treating a minor cut or scrape?</h2>
-            <div class="answers">
-                <button type="button" onclick="selectAnswer(this, 'A', 1)">A. Apply antibiotic ointment immediately</button>
-                <button type="button" onclick="selectAnswer(this, 'B', 1)">B. Wash your hands</button>
-                <button type="button" onclick="selectAnswer(this, 'C', 1)">C. Cover the wound with a bandage</button>
-                <button type="button" onclick="selectAnswer(this, 'D', 1)">D. Stop the bleeding by pressing the wound with a clean cloth</button>
+    <div class="quiz-container">
+        <h1>Quiz</h1>
+        <form id="quizForm">
+            <!-- Multiple Choice Questions -->
+            <div class="question">
+                <h2>1. What is the first step in treating a minor cut or scrape?</h2>
+                <div class="answers">
+                    <button type="button" onclick="selectAnswer(this, 'A', 1)">A. Apply antibiotic ointment immediately</button>
+                    <button type="button" onclick="selectAnswer(this, 'B', 1)">B. Wash your hands</button>
+                    <button type="button" onclick="selectAnswer(this, 'C', 1)">C. Cover the wound with a bandage</button>
+                    <button type="button" onclick="selectAnswer(this, 'D', 1)">D. Stop the bleeding by pressing the wound with a clean cloth</button>
+                </div>
             </div>
-        </div>
 
-        <!-- Question 2 -->
-        <div class="question">
-            <h2>2. Which of the following is NOT recommended for cleaning a wound?</h2>
-            <div class="answers">
-                <button type="button" onclick="selectAnswer(this, 'A', 2)">A. Rinse the wound with water</button>
-                <button type="button" onclick="selectAnswer(this, 'B', 2)">B. Wash around the wound with soap</button>
-                <button type="button" onclick="selectAnswer(this, 'C', 2)">C. Use hydrogen peroxide or iodine</button>
-                <button type="button" onclick="selectAnswer(this, 'D', 2)">D. Remove dirt with clean tweezers</button>
+            <div class="question">
+                <h2>2. Which of the following is NOT recommended for cleaning a wound?</h2>
+                <div class="answers">
+                    <button type="button" onclick="selectAnswer(this, 'A', 2)">A. Rinse the wound with water</button>
+                    <button type="button" onclick="selectAnswer(this, 'B', 2)">B. Wash around the wound with soap</button>
+                    <button type="button" onclick="selectAnswer(this, 'C', 2)">C. Use hydrogen peroxide or iodine</button>
+                    <button type="button" onclick="selectAnswer(this, 'D', 2)">D. Remove dirt with clean tweezers</button>
+                </div>
             </div>
-        </div>
 
-        <!-- Question 3 -->
-        <div class="question">
-            <h2>3. What should you use to remove dirt or debris from a wound?</h2>
-            <div class="answers">
-                <button type="button" onclick="selectAnswer(this, 'A', 3)">A. Your fingers</button>
-                <button type="button" onclick="selectAnswer(this, 'B', 3)">B. A clean cloth</button>
-                <button type="button" onclick="selectAnswer(this, 'C', 3)">C. Alcohol-cleaned tweezers</button>
-                <button type="button" onclick="selectAnswer(this, 'D', 3)">D. Soap</button>
+            <div class="question">
+                <h2>3. What should you use to remove dirt or debris from a wound?</h2>
+                <div class="answers">
+                    <button type="button" onclick="selectAnswer(this, 'A', 3)">A. Your fingers</button>
+                    <button type="button" onclick="selectAnswer(this, 'B', 3)">B. A clean cloth</button>
+                    <button type="button" onclick="selectAnswer(this, 'C', 3)">C. Alcohol-cleaned tweezers</button>
+                    <button type="button" onclick="selectAnswer(this, 'D', 3)">D. Soap</button>
+                </div>
             </div>
-        </div>
 
-        <!-- Question 4 -->
-        <div class="question">
-            <h2>4. It is okay to use hydrogen peroxide or iodine to clean a wound because it kills bacteria effectively.</h2>
-            <div class="answers">
-                <button type="button" onclick="selectAnswer(this, 'True', 4)">True</button>
-                <button type="button" onclick="selectAnswer(this, 'False', 4)">False</button>
+            <div class="question">
+                <h2>4. When is it necessary to seek medical care for a minor cut or scrape?</h2>
+                <div class="answers">
+                    <button type="button" onclick="selectAnswer(this, 'A', 4)">A. If the wound is small and not bleeding</button>
+                    <button type="button" onclick="selectAnswer(this, 'B', 4)">B. If there is increasing pain, redness, or warmth near the wound</button>
+                    <button type="button" onclick="selectAnswer(this, 'C', 4)">C. If the wound is clean and dry</button>
+                    <button type="button" onclick="selectAnswer(this, 'D', 4)">D. If the wound stops bleeding within a few minutes</button>
+                </div>
             </div>
-        </div>
 
-        <!-- Question 5 -->
-        <div class="question">
-            <h2>5. A minor scrape or scratch does not need to be covered with a bandage.</h2>
-            <div class="answers">
-                <button type="button" onclick="selectAnswer(this, 'True', 5)">True</button>
-                <button type="button" onclick="selectAnswer(this, 'False', 5)">False</button>
+            <div class="question">
+                <h2>5. What is the purpose of applying petroleum jelly or antibiotic ointment to a wound?</h2>
+                <div class="answers">
+                    <button type="button" onclick="selectAnswer(this, 'A', 5)">A. To disinfect the wound</button>
+                    <button type="button" onclick="selectAnswer(this, 'B', 5)">B. To keep the wound moist and prevent scarring</button>
+                    <button type="button" onclick="selectAnswer(this, 'C', 5)">C. To stop the bleeding</button>
+                    <button type="button" onclick="selectAnswer(this, 'D', 5)">D. To cover the wound from dirt</button>
+                </div>
             </div>
-        </div>
 
-        <!-- Submit Button -->
-        <button type="button" class="submit-btn" onclick="submitQuiz()">Submit</button>
-    </form>
-</div>
+            <!-- True/False Questions -->
+            <div class="question">
+                <h2>6. It is okay to use hydrogen peroxide or iodine to clean a wound because it kills bacteria effectively.</h2>
+                <div class="answers">
+                    <button type="button" onclick="selectAnswer(this, 'False', 6)">False</button>
+                    <button type="button" onclick="selectAnswer(this, 'True', 6)">True</button>
+                </div>
+            </div>
 
-<script>
-    // Correct answers object based on specified answers: B, C, C, False, True
-    const correctAnswers = {
-        1: 'B', 
-        2: 'C',
-        3: 'C',
-        4: 'False',
-        5: 'True'
-    };
-    
-    let selectedAnswers = {};
+            <div class="question">
+                <h2>7. A minor scrape or scratch does not need to be covered with a bandage.</h2>
+                <div class="answers">
+                    <button type="button" onclick="selectAnswer(this, 'True', 7)">True</button>
+                    <button type="button" onclick="selectAnswer(this, 'False', 7)">False</button>
+                </div>
+            </div>
 
-    function selectAnswer(button, answer, questionNumber) {
-        // Disable all buttons in the current question
-        let buttons = button.parentElement.querySelectorAll('button');
-        buttons.forEach(btn => {
-            btn.disabled = true;
-            btn.style.backgroundColor = btn === button ? 'gray' : ''; // Highlight selected button in gray
-        });
-        
-        // Store the selected answer
-        selectedAnswers[questionNumber] = answer;
-    }
+            <div class="question">
+                <h2>8. If a wound has been exposed to dirt or debris and you can’t remove it all, you should visit a healthcare professional.</h2>
+                <div class="answers">
+                    <button type="button" onclick="selectAnswer(this, 'True', 8)">True</button>
+                    <button type="button" onclick="selectAnswer(this, 'False', 8)">False</button>
+                </div>
+            </div>
 
-    function submitQuiz() {
-        // Calculate score
-        let score = 0;
-        for (let questionNumber in correctAnswers) {
-            if (selectedAnswers[questionNumber] === correctAnswers[questionNumber]) {
-                score++;
+            <div class="question">
+                <h2>9. If you have not had a tetanus shot in the past five years and the wound is deep or dirty, you should seek medical care.</h2>
+                <div class="answers">
+                    <button type="button" onclick="selectAnswer(this, 'True', 9)">True</button>
+                    <button type="button" onclick="selectAnswer(this, 'False', 9)">False</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>10. You should change the bandage at least once a day or whenever it becomes wet or dirty.</h2>
+                <div class="answers">
+                    <button type="button" onclick="selectAnswer(this, 'True', 10)">True</button>
+                    <button type="button" onclick="selectAnswer(this, 'False', 10)">False</button>
+                </div>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="submitQuiz()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            1: 'B', 
+            2: 'C',
+            3: 'C',
+            4: 'B',
+            5: 'B',
+            6: 'False',
+            7: 'True',
+            8: 'True',
+            9: 'True',
+            10: 'True'
+        };
+
+        let selectedAnswers = {};
+
+        function selectAnswer(button, answer, questionNumber) {
+            let buttons = button.parentElement.querySelectorAll('button');
+            buttons.forEach(btn => btn.disabled = true);
+
+            if (answer === correctAnswers[questionNumber]) {
+                button.classList.add('correct');
+            } else {
+                button.classList.add('incorrect');
             }
+
+            selectedAnswers[questionNumber] = answer;
         }
-        
-        // Store score in localStorage
-        localStorage.setItem('score', score);
 
-        // Redirect to results page
-        window.location.href = 'results.html';
-    }
-</script>
+        function submitQuiz() {
+            let score = 0;
+            for (let questionNumber in correctAnswers) {
+                if (selectedAnswers[questionNumber] === correctAnswers[questionNumber]) {
+                    score++;
+                }
+            }
 
+            localStorage.setItem('score', score);
+            window.location.href = 'results.html';
+        }
+    </script>
 </body>
 </html>
