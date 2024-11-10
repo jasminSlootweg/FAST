@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <style>
+        /* Style for page body */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        /* Top Navigation Bar */
+        /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Styling the Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: #9cd3e8;
+        color: #00171F;
+    }
+
+    /* Logo Section */
+    .navbar .logo img {
+        height: 40px; /* Adjust height as needed */
+    }
+
+    /* Navigation Links */
+    .navbar .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Links and Icons */
+    .nav-links a {
+        display: flex;
+        align-items: center;
+        color: #00171F;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    /* Icon Styling */
+    .nav-links a img {
+        height: 20px; /* Adjust icon height as needed */
+        width: 20px;
+        margin-left: 8px;
+    }
+
+    /* Hover Effect for Links */
+    .nav-links a:hover {
+        color: #007ea7; /* Lighter color on hover */
+    }
+
+
+        /* Bottom Navigation Bar */
+        .navbar-bottom {
+            background-color: #9cd3e8; /* New color */
+            color: #00171F;
+            padding: 20px 0;
+            width: 100%;
+            text-align: left;
+            position: relative;
+        }
+        .navbar-bottom .nav-links {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .navbar-bottom .nav-links div {
+            flex: 1;
+        }
+        .navbar-bottom .nav-links a {
+            color: #00171F;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Categories Page Content */
+        .categories-content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+        .categories-content h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* Our First Aid Categories Section with Image Background */
+        .categories-header {
+            background-image: url('../image/welcomeBackground.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 80px 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        /* Category List Styling */
+        .category-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+        }
+        .category-list li {
+            background-color: #007ea7; /* New background color */
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .category-list li:hover {
+            transform: scale(1.05);
+        }
+        .category-list a {
+            color: white; /* Text color white */
+            font-size: 18px;
+            text-decoration: none;
+        }
+    </style>
+    </head>
+    <body>
+
+        <!-- Top Navigation Bar -->
+        <!-- Top Navigation Bar -->
+    <div class="navbar">
+        <!-- Left Side: Logo -->
+        <div class="logo">
+            <img src="../image/Logo.svg" alt="Logo">
+        </div>
+
+        <!-- Right Side: Navigation Links with Images -->
+        <div class="nav-links">
+            <a href="#home">
+                Home
+                <img src="../image/home.png" alt="Home Icon">
+            </a>
+            <a href="#categories">
+                Categories
+                <img src="../image/menu.png" alt="Categories Icon">
+            </a>
+            <a href="#login">
+                Login
+                <img src="../image/profile.png" alt="Login Icon">
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Categories Page Header Section with Image Background -->
+    <div class="categories-header">
+        <h2>Our First Aid Categories</h2>
+    </div>
+
+    <!-- Categories Page Content -->
+    <div class="categories-content">
+        <ul class="category-list">
+            <li>
+                <a href="#category1">Basic First Aid</a>
+            </li>
+            <li>
+                <a href="#category2">CPR and AED</a>
+            </li>
+            <li>
+                <a href="#category3">Wound Care</a>
+            </li>
+            <li>
+                <a href="#category4">Burns and Scalds</a>
+            </li>
+            <li>
+                <a href="#category5">Choking and Airway Obstruction</a>
+            </li>
+            <li>
+                <a href="#category6">Medical Emergencies</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <div class="navbar-bottom">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; padding: 0 20px;">
+            <!-- Logo on the Left -->
+            <div style="flex: 1;">
+                <img src="../image/Logo.svg" alt="Logo" style="height: 40px;">
+            </div>
+            
+            <!-- Navigation Columns on the Right -->
+            <div class="nav-links" style="flex: 3; display: flex; justify-content: space-between;">
+                
+                <!-- Quick Links Column -->
+                <div style="flex: 1;">
+                    <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">Quick Links</h4>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li><a href="#home" style="color: #00171F; text-decoration: none;">Home</a></li>
+                        <li><a href="#profile" style="color: #00171F; text-decoration: none;">Profile</a></li>
+                        <li><a href="#categories" style="color: #00171F; text-decoration: none;">Categories</a></li>
+                    </ul>
+                </div>
+
+                <!-- About Column -->
+                <div style="flex: 1;">
+                    <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">About</h4>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li><a href="#team" style="color: #00171F; text-decoration: none;">Our Team</a></li>
+                        <li><a href="#mission" style="color: #00171F; text-decoration: none;">Our Mission</a></li>
+                        <li><a href="#policies" style="color: #00171F; text-decoration: none;">Policies</a></li>
+                        <li><a href="#partners" style="color: #00171F; text-decoration: none;">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Help Column -->
+                <div style="flex: 1;">
+                    <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">Help</h4>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li><a href="#faq" style="color: #00171F; text-decoration: none;">FAQ</a></li>
+                        <li><a href="#help-center" style="color: #00171F; text-decoration: none;">Help Center</a></li>
+                        <li><a href="#privacy" style="color: #00171F; text-decoration: none;">Privacy Settings</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
