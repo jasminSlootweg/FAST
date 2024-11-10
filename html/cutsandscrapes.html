@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome</title>
+    <title>Cuts and Scrapes Scenario</title>
     <style>
+        
         /* Basic Reset */
         * {
             margin: 0;
@@ -52,9 +52,58 @@
         .nav-links a:hover {
             color: #007ea7; /* Lighter color on hover */
         }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .cuts-info {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        .cuts-info h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .cuts-info p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* List of Wounds */
+        .wound-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .wound-item {
+            background-color: #9cd3e8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .wound-item h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .wound-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
     </style>
 </head>
-
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
@@ -79,7 +128,7 @@
             </a>
         </div>
     </nav>
-   
+    
     <div style="
     background-image: url('../image/welcomeBackground.jpg');
     background-size: cover;
@@ -90,14 +139,13 @@
     text-align: center;
     color: #00171F;
 ">
-    <h1 style="font-size: 40px; margin-bottom: 20px;">Practice Today, Save a Life Tomorrow</h1>
+    <h1 style="font-size: 40px; margin-bottom: 20px;">Cuts and Scrapes</h1>
     <h4 style="font-weight: normal; margin-bottom: 30px;">
-        Practice essential first aid skills anytime, anywhere, <br>
-        with our on-the-go web app—empowering you to act confidently in any situation.
+        Study the information, and when you're ready, do the practice scenario!
     </h4>
     
     <!-- Get Started Button -->
-    <a href="main.html" style="
+    <a href="practicecutsandscrapes.html" style="
         display: inline-block;
         padding: 12px 24px;
         background-color: #007ea7;
@@ -107,41 +155,40 @@
         border-radius: 5px;
         font-weight: bold;
     ">
-        Get Started
+        Practice
     </a>
 </div>
+<div class="cuts-info">
+    <h2>Types of Cuts and Wounds</h2>
+    <p>Here are different types of cuts and wounds you might encounter and how to treat them:</p>
 
-<!-- How do we work> -->
-<div style="
-    background-color: #007ea7; /* Solid background color */
-    padding: 40px; 
-    width: 70%; 
-    margin: 50px auto; 
-    border-radius: 8px;
-    text-align: left;
-">
-    <h2 style="font-size: 28px; margin-bottom: 20px; text-align: left; Color: white;">
-        How Do We Work?
-    </h2>
-    
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px; color: white;">
-        We have a simple process easily accessible to everyone:
-    </p>
-    
-    <ol style="font-size: 16px; padding-left: 20px; color: white;">
-        <li>Browse our categories, and select the category you wish to practice explore</li>
-        <li>Once you choose a category, browse our scenarios to find the one you wish to practice </li>
-        <li>Click the scenario to be taen to our practice page</li>
-        <li>Make sure you pay attention and practice multiple times! Practicing once doesnt mean you have it memorised!</li>
-        
-    </ol>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px; color: white;"">
-        Once you finish practicing our scenario, ou get to do it all over again!
-    </p>
+    <div class="wound-list">
+        <!-- First Wound -->
+        <div class="wound-item">
+            <h3>Minor Scrape</h3>
+            <p>A small abrasion to the skin that may cause bleeding. Clean with water and apply an antiseptic ointment.</p>
+        </div>
 
+        <!-- Second Wound -->
+        <div class="wound-item">
+            <h3>Deep Cut</h3>
+            <p>A deeper wound that may require stitches. Apply pressure to stop the bleeding and seek medical help immediately.</p>
+        </div>
+
+        <!-- Third Wound -->
+        <div class="wound-item">
+            <h3>Grazes</h3>
+            <p>Shallow wounds typically caused by friction. Clean with water and apply a sterile bandage.</p>
+        </div>
+
+        <!-- Fourth Wound -->
+        <div class="wound-item">
+            <h3>Incision</h3>
+            <p>A clean cut made by a sharp object. It's important to clean the wound properly and apply sterile dressing.</p>
+        </div>
+    </div>
 </div>
 
-<!-- Bottom Nav Bar -->
 <div style="background-color: #9cd3e8; color: #00171F; padding: 20px 0; width: 100%; text-align: left;">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; padding: 0 20px;">
         
@@ -187,6 +234,7 @@
         </div>
     </div>
 </div>
-    
+
+
 </body>
 </html>

@@ -195,8 +195,8 @@ body {
 }
 
 .category-image img {
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -265,6 +265,7 @@ body {
     .see-more {
         font-size: 20px;
     }
+        
 }
 
 @media (max-width: 480px) {
@@ -314,10 +315,36 @@ body {
 
 
 <!-- Welcome Section -->
-<div class="welcome-section">
-    <h1>Welcome to Our First Aid Scenario Training</h1>
-    <h4>Get started by choosing a category or scenario below</h4>
+<div style="
+    background-image: url('../image/welcomeBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%; 
+    padding: 40px; 
+    border-radius: 8px;
+    text-align: center;
+    color: #00171F;
+">
+    <h1 style="font-size: 40px; margin-bottom: 20px;">Welcome to our First Aid Scenario Training</h1>
+    <h4 style="font-weight: normal; margin-bottom: 30px;">
+        To get started, choose a category or popular scenario!
+    </h4>
+    
+    <!-- Get Started Button -->
+    <a href="#categories" style="
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #007ea7;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        font-weight: bold;
+    ">
+        Browse All Categories
+    </a>
 </div>
+
 
 <!-- Categories Section -->
 <div class="categories-section">
@@ -325,27 +352,27 @@ body {
 
     <!-- Category 1: Cuts -->
     <div class="category">
-        <a href="cuts.html" class="category-name">Cuts</a> <!-- This is the clickable category name that links to the category page -->
+        <a href="woundcare.html" class="category-name">Wound Care</a> <!-- This is the clickable category name that links to the category page -->
         <div class="category-images">
             <div class="category-image">
-                <img src="../image/cut1.jpg" alt="Cut Scenario 1">
-                <div class="image-description">Image 1</div>
-                <a href="cut-scenario1.html" class="image-link">View Scenario</a>
+                <img src="../image/Wound Care/cutsandscrapes.png" alt="Cuts and Scrapes">
+                <div class="image-description">Cuts and Scrapes</div>
+                <a href="cutsandscrapes.html" class="image-link">View Scenario</a>
             </div>
             <div class="category-image">
-                <img src="../image/cut2.jpg" alt="Cut Scenario 2">
-                <div class="image-description">Image 2</div>
-                <a href="cut-scenario2.html" class="image-link">View Scenario</a>
+                <img src="../image/Wound Care/burns.png" alt="Burns">
+                <div class="image-description">Burns</div>
+                <a href="burns.html" class="image-link">View Scenario</a>
             </div>
             <div class="category-image">
-                <img src="../image/cut3.jpg" alt="Cut Scenario 3">
-                <div class="image-description">Image 3</div>
-                <a href="cut-scenario3.html" class="image-link">View Scenario</a>
+                <img src="../image/Wound Care/nosebleed.png" alt="nosebleeds">
+                <div class="image-description">Nosebleeds</div>
+                <a href="nosebleeds.html" class="image-link">View Scenario</a>
             </div>
             <div class="category-image">
-                <img src="../image/cut4.jpg" alt="Cut Scenario 4">
-                <div class="image-description">Image 4</div>
-                <a href="cut-scenario4.html" class="image-link">View Scenario</a>
+                <img src="../image/Wound Care/splinter.png" alt="Splinter">
+                <div class="image-description">Splinters</div>
+                <a href="splinter.html" class="image-link">View Scenario</a>
             </div>
         </div>
     </div>
