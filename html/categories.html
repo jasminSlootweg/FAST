@@ -92,7 +92,7 @@
             max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
-            background-color: white;
+            background-color:azure;
             border-radius: 8px;
         }
         .categories-content h2 {
@@ -100,6 +100,39 @@
             font-size: 30px;
             margin-bottom: 30px;
         }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 90px; /* Creates a gap between the search bar and the nav links */
+        }
+
+        /* Styling the search input */
+        .search-input {
+            padding: 8px;
+            font-size: 16px;
+            width: 250px; /* Adjust the width as needed */
+            border-radius: 5px;
+            border: 1px solid #007ea7;
+            margin-right: 10px;
+        }
+
+        /* Styling the search button */
+        .search-button {
+            padding: 8px 16px;
+            background-color: #007ea7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Hover effect for the button */
+        .search-button:hover {
+            background-color: #005f75;
+        }
+
 
         /* Our First Aid Categories Section with Image Background */
         .categories-header {
@@ -140,30 +173,35 @@
     </head>
     <body>
 
-        <!-- Top Navigation Bar -->
-        <!-- Top Navigation Bar -->
-    <div class="navbar">
-        <!-- Left Side: Logo -->
-        <div class="logo">
-            <img src="../image/Logo.svg" alt="Logo">
-        </div>
-
-        <!-- Right Side: Navigation Links with Images -->
-        <div class="nav-links">
-            <a href="main.html">
-                Home
-                <img src="../image/home.png" alt="Home Icon">
-            </a>
-            <a href="categories.html">
-                Categories
-                <img src="../image/menu.png" alt="Categories Icon">
-            </a>
-            <a href="#login">
-                Login
-                <img src="../image/profile.png" alt="Login Icon">
-            </a>
-        </div>
+         <!-- Top Navigation Bar -->
+<div class="navbar">
+    <!-- Left Side: Logo -->
+    <div class="logo">
+        <img src="../image/Logo.svg" alt="Logo">
     </div>
+
+    <!-- Middle: Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search categories..." class="search-input">
+        <button type="button" class="search-button">Search</button>
+    </div>
+
+    <!-- Right Side: Navigation Links with Images -->
+    <div class="nav-links">
+        <a href="main.html">
+            Home
+            <img src="../image/home.png" alt="Home Icon">
+        </a>
+        <a href="categories.html">
+            Categories
+            <img src="../image/menu.png" alt="Categories Icon">
+        </a>
+        <a href="#login">
+            Login
+            <img src="../image/profile.png" alt="Login Icon">
+        </a>
+    </div>
+</div>
 
 
     <!-- Categories Page Header Section with Image Background -->

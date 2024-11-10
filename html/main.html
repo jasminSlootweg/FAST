@@ -12,6 +12,43 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Bottom Navigation Bar */
+.navbar-bottom {
+            background-color: #9cd3e8; /* New color */
+            color: #00171F;
+            padding: 20px 0;
+            width: 100%;
+            text-align: left;
+            position: relative;
+        }
+        .navbar-bottom .nav-links {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .navbar-bottom .nav-links div {
+            flex: 1;
+        }
+        .navbar-bottom .nav-links a {
+            color: #00171F;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Categories Page Content */
+        .categories-content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+        .categories-content h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
 /* Top Navigation Bar */
 * {
     margin: 0;
@@ -19,14 +56,48 @@ body {
     box-sizing: border-box;
 }
 
-/* Styling the Navbar */
+/* Top Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Keep the logo and nav links on opposite sides */
     align-items: center;
     padding: 15px 30px;
     background-color: #9cd3e8;
     color: #00171F;
+}
+
+/* Right Side: Search Bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 90px; /* Creates a gap between the search bar and the nav links */
+}
+
+/* Styling the search input */
+.search-input {
+    padding: 8px;
+    font-size: 16px;
+    width: 250px; /* Adjust the width as needed */
+    border-radius: 5px;
+    border: 1px solid #007ea7;
+    margin-right: 10px;
+}
+
+/* Styling the search button */
+.search-button {
+    padding: 8px 16px;
+    background-color: #007ea7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover effect for the button */
+.search-button:hover {
+    background-color: #005f75;
 }
 
 /* Logo Section */
@@ -61,34 +132,6 @@ body {
 .nav-links a:hover {
     color: #007ea7; /* Lighter color on hover */
 }
-
-
-/* Bottom Navigation Bar */
-.navbar-bottom {
-    background-color: #9cd3e8; /* New color */
-    color: #00171F;
-    padding: 20px 0;
-    width: 100%;
-    text-align: left;
-    position: relative;
-}
-
-.navbar-bottom .nav-links {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-.navbar-bottom .nav-links div {
-    flex: 1;
-}
-
-.navbar-bottom .nav-links a {
-    color: #00171F;
-    text-decoration: none;
-    display: block;
-}
-
 
 /* Categories Page Content */
 .categories-content {
@@ -288,30 +331,35 @@ body {
     </head>
     <body>
 
-        <!-- Top Navigation Bar -->
-        <!-- Top Navigation Bar -->
-    <div class="navbar">
-        <!-- Left Side: Logo -->
-        <div class="logo">
-            <img src="../image/Logo.svg" alt="Logo">
-        </div>
-
-        <!-- Right Side: Navigation Links with Images -->
-        <div class="nav-links">
-            <a href="main.html">
-                Home
-                <img src="../image/home.png" alt="Home Icon">
-            </a>
-            <a href="categories.html">
-                Categories
-                <img src="../image/menu.png" alt="Categories Icon">
-            </a>
-            <a href="#login">
-                Login
-                <img src="../image/profile.png" alt="Login Icon">
-            </a>
-        </div>
+     <!-- Top Navigation Bar -->
+<div class="navbar">
+    <!-- Left Side: Logo -->
+    <div class="logo">
+        <img src="../image/Logo.svg" alt="Logo">
     </div>
+
+    <!-- Middle: Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search categories..." class="search-input">
+        <button type="button" class="search-button">Search</button>
+    </div>
+
+    <!-- Right Side: Navigation Links with Images -->
+    <div class="nav-links">
+        <a href="main.html">
+            Home
+            <img src="../image/home.png" alt="Home Icon">
+        </a>
+        <a href="categories.html">
+            Categories
+            <img src="../image/menu.png" alt="Categories Icon">
+        </a>
+        <a href="#login">
+            Login
+            <img src="../image/profile.png" alt="Login Icon">
+        </a>
+    </div>
+</div>
 
 
 <!-- Welcome Section -->
@@ -456,51 +504,74 @@ body {
 </div>
 
 
-    <!-- Bottom Navigation Bar -->
-    <div class="navbar-bottom">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; padding: 0 20px;">
-            <!-- Logo on the Left -->
+   <!-- Bottom Navigation Bar -->
+   <div class="navbar-bottom">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; padding: 0 20px;">
+        <!-- Logo on the Left -->
+        <div style="flex: 1;">
+            <img src="../image/Logo.svg" alt="Logo" style="height: 80px;">
+        </div>
+        
+        <!-- Navigation Columns on the Right -->
+        <div class="nav-links" style="flex: 3; display: flex; justify-content: space-between;">
+            
+            <!-- Quick Links Column -->
             <div style="flex: 1;">
-                <img src="../image/Logo.svg" alt="Logo" style="height: 80px;">
+                <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">Quick Links</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><a href="welcome.html" style="color: #00171F; text-decoration: none;">Welcome</a></li>
+                    <li><a href="#profile" style="color: #00171F; text-decoration: none;">Profile</a></li>
+                    <li><a href="categories.html" style="color: #00171F; text-decoration: none;">Categories</a></li>
+                </ul>
+            </div>
+
+            <!-- About Column -->
+            <div style="flex: 1;">
+                <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">About</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><a href="team.html" style="color: #00171F; text-decoration: none;">Our Team</a></li>
+                    <li><a href="#mission" style="color: #00171F; text-decoration: none;">Our Mission</a></li>
+                    <li><a href="#policies" style="color: #00171F; text-decoration: none;">Policies</a></li>
+                    <li><a href="#partners" style="color: #00171F; text-decoration: none;">Partners</a></li>
+                </ul>
             </div>
             
-            <!-- Navigation Columns on the Right -->
-            <div class="nav-links" style="flex: 3; display: flex; justify-content: space-between;">
-                
-                <!-- Quick Links Column -->
-                <div style="flex: 1;">
-                    <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">Quick Links</h4>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li><a href="welcome.html" style="color: #00171F; text-decoration: none;">Welcome</a></li>
-                        <li><a href="#profile" style="color: #00171F; text-decoration: none;">Profile</a></li>
-                        <li><a href="categories.html" style="color: #00171F; text-decoration: none;">Categories</a></li>
-                    </ul>
-                </div>
-
-                <!-- About Column -->
-                <div style="flex: 1;">
-                    <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">About</h4>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li><a href="team.html" style="color: #00171F; text-decoration: none;">Our Team</a></li>
-                        <li><a href="#mission" style="color: #00171F; text-decoration: none;">Our Mission</a></li>
-                        <li><a href="#policies" style="color: #00171F; text-decoration: none;">Policies</a></li>
-                        <li><a href="#partners" style="color: #00171F; text-decoration: none;">Partners</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Help Column -->
-                <div style="flex: 1;">
-                    <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">Help</h4>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li><a href="#faq" style="color: #00171F; text-decoration: none;">FAQ</a></li>
-                        <li><a href="#help-center" style="color: #00171F; text-decoration: none;">Help Center</a></li>
-                        <li><a href="#privacy" style="color: #00171F; text-decoration: none;">Privacy Settings</a></li>
-                    </ul>
-                </div>
-
+            <!-- Help Column -->
+            <div style="flex: 1;">
+                <h4 style="border-bottom: 2px solid #00171F; padding-bottom: 10px;">Help</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><a href="#faq" style="color: #00171F; text-decoration: none;">FAQ</a></li>
+                    <li><a href="#help-center" style="color: #00171F; text-decoration: none;">Help Center</a></li>
+                    <li><a href="#privacy" style="color: #00171F; text-decoration: none;">Privacy Settings</a></li>
+                </ul>
             </div>
+
         </div>
     </div>
-
+</div>
+    
+    <script>
+        function performSearch() {
+            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+            const results = categories.filter(category =>
+                category.name.toLowerCase().includes(searchQuery)
+            );
+    
+            // Display search results dynamically
+            const resultContainer = document.getElementById('searchResults');
+            resultContainer.innerHTML = '';  // Clear previous results
+    
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const resultItem = document.createElement('div');
+                    resultItem.style.marginBottom = '10px';
+                    resultItem.innerHTML = `<a href="${result.link}" style="color: #007ea7; text-decoration: none;">${result.name}</a>`;
+                    resultContainer.appendChild(resultItem);
+                });
+            } else {
+                resultContainer.innerHTML = '<p>No categories found.</p>';
+            }
+        }
+    </script>
 </body>
 </html>

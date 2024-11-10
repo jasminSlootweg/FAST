@@ -73,14 +73,48 @@
             box-sizing: border-box;
         }
 
-        /* Styling the Navbar */
+        /* Top Navigation Bar */
         .navbar {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Keep the logo and nav links on opposite sides */
             align-items: center;
             padding: 15px 30px;
             background-color: #9cd3e8;
             color: #00171F;
+        }
+
+        /* Right Side: Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 90px; /* Creates a gap between the search bar and the nav links */
+        }
+
+        /* Styling the search input */
+        .search-input {
+            padding: 8px;
+            font-size: 16px;
+            width: 250px; /* Adjust the width as needed */
+            border-radius: 5px;
+            border: 1px solid #007ea7;
+            margin-right: 10px;
+        }
+
+        /* Styling the search button */
+        .search-button {
+            padding: 8px 16px;
+            background-color: #007ea7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Hover effect for the button */
+        .search-button:hover {
+            background-color: #005f75;
         }
 
         /* Logo Section */
@@ -94,6 +128,7 @@
             align-items: center;
         }
 
+        /* Links and Icons */
         .nav-links a {
             display: flex;
             align-items: center;
@@ -103,12 +138,14 @@
             font-size: 16px;
         }
 
+        /* Icon Styling */
         .nav-links a img {
             height: 20px; /* Adjust icon height as needed */
             width: 20px;
             margin-left: 8px;
         }
 
+        /* Hover Effect for Links */
         .nav-links a:hover {
             color: #007ea7; /* Lighter color on hover */
         }
@@ -128,10 +165,17 @@
 </head>
 <body>
 <!-- Navigation Bar -->
-<nav class="navbar">
+ <!-- Top Navigation Bar -->
+ <div class="navbar">
     <!-- Left Side: Logo -->
     <div class="logo">
         <img src="../image/Logo.svg" alt="Logo">
+    </div>
+
+    <!-- Middle: Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search categories..." class="search-input">
+        <button type="button" class="search-button">Search</button>
     </div>
 
     <!-- Right Side: Navigation Links with Images -->
@@ -140,7 +184,7 @@
             Home
             <img src="../image/home.png" alt="Home Icon">
         </a>
-        <a href="#categories">
+        <a href="categories.html">
             Categories
             <img src="../image/menu.png" alt="Categories Icon">
         </a>
@@ -149,7 +193,7 @@
             <img src="../image/profile.png" alt="Login Icon">
         </a>
     </div>
-</nav>
+</div>
 
 <div class="categories-header">
     <h2>Wound Care</h2>
